@@ -4,6 +4,7 @@
   --hamburger-gap: 0.4rem;
   --foreground-color: #333;
   --background-color: #fff;
+  --hamburger-menu-margin: 1rem;
 }
 
 * {
@@ -18,8 +19,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--hamburger-gap);
-  margin: 1rem;
+  margin: var(--hamburger-menu-margin);
   cursor: pointer;
+  width: max-content;
+  position: absolute;
+  z-index: 9;
 }
 
 .hamburger-menu input,

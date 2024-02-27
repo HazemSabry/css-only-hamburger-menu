@@ -89,3 +89,10 @@ body {
 .hamburger-menu:has(input:checked) + .sidebar {
   transform: translateX(0);
 }
+
+.hamburger-menu input:focus-visible,
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after {
+  border: 1px solid var(--background-color);
+  box-shadow: 0 0 0 1px var(--foreground-color);
+}

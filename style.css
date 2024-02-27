@@ -18,6 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--hamburger-gap);
+  margin: 1rem;
 }
 
 .hamburger-menu input,
@@ -27,4 +28,5 @@ body {
   width: var(--bar-width);
   height: var(--bar-height);
   background-color: var(--foreground-color);
+  border-radius: 100px;
 }

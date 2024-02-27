@@ -37,6 +37,7 @@ body {
   border-radius: 100px;
 
   transition: opacity var(--animation-time), width var(--animation-time);
+  transform-origin: left center;
 }
 
 .hamburger-menu input {
@@ -48,4 +49,8 @@ body {
 .hamburger-menu input:checked {
   opacity: 0;
   width: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  transform: rotate(45deg);
 }

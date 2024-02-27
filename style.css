@@ -5,6 +5,7 @@
   --foreground-color: #333;
   --background-color: #fff;
   --hamburger-menu-margin: 1rem;
+  --animation-time: 200ms;
 }
 
 * {
@@ -34,10 +35,17 @@ body {
   height: var(--bar-height);
   background-color: var(--foreground-color);
   border-radius: 100px;
+
+  transition: opacity var(--animation-time), width var(--animation-time);
 }
 
 .hamburger-menu input {
   appearance: none;
   outline: none;
   pointer-events: none;
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
 }

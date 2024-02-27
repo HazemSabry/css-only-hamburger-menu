@@ -9,6 +9,9 @@
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 
   --x-width: calc(var(--hamburger-height) * 1.4142135623730950488);
+
+  --sidebar-min-width: calc(var(--x-width) * 2);
+  --sidebar-max-width: calc(var(--x-width) * 4);
 }
 
 * {
@@ -17,6 +20,7 @@
 }
 
 body {
+  position: relative;
 }
 
 .hamburger-menu {
@@ -27,6 +31,8 @@ body {
   cursor: pointer;
   width: max-content;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 9;
 }
 
@@ -40,7 +46,7 @@ body {
   border-radius: 100px;
 
   transition: opacity var(--animation-time), width var(--animation-time),
-    transform var(--animation-time);
+    transform var(--animation-time), background-color var(--animation-time);
   transform-origin: left center;
 }
 
@@ -58,9 +64,19 @@ body {
 .hamburger-menu:has(input:checked)::before {
   transform: translateY(calc(var(--bar-height) / -2)) rotate(45deg);
   width: var(--x-width);
+  background-color: var(--background-color);
 }
 
 .hamburger-menu:has(input:checked)::after {
   transform: translateY(calc(var(--bar-height) / 2)) rotate(-45deg);
   width: var(--x-width);
+  background-color: var(--background-color);
+}
+
+.sidebar {
+  min-width: var(--sidebar-min-width);
+  max-width: var(--sidebar-max-width);
+  padding-top: calc(var(--hamburger-height) + 2rem);
+  background-color: var(--foreground-color);
+  min-height: 100vh;
 }

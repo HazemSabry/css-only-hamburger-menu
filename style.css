@@ -1,5 +1,5 @@
 :root {
-  --bar-width: 5rem;
+  --bar-width: 3.5rem;
   --bar-height: 0.5rem;
   --hamburger-gap: 0.4rem;
   --foreground-color: #333;
@@ -19,6 +19,7 @@ body {
   flex-direction: column;
   gap: var(--hamburger-gap);
   margin: 1rem;
+  cursor: pointer;
 }
 
 .hamburger-menu input,
@@ -29,4 +30,10 @@ body {
   height: var(--bar-height);
   background-color: var(--foreground-color);
   border-radius: 100px;
+}
+
+.hamburger-menu input {
+  appearance: none;
+  outline: none;
+  pointer-events: none;
 }

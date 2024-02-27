@@ -96,3 +96,10 @@ body {
   border: 1px solid var(--background-color);
   box-shadow: 0 0 0 1px var(--foreground-color);
 }
+
+.hamburger-menu input:focus-visible:checked,
+.hamburger-menu:has(input:focus-visible:checked)::before,
+.hamburger-menu:has(input:focus-visible:checked)::after {
+  border: 1px solid var(--foreground-color);
+  box-shadow: 0 0 0 1px var(--background-color);
+}

@@ -1,4 +1,9 @@
 :root {
+  --bar-width: 5rem;
+  --bar-height: 0.5rem;
+  --hamburger-gap: 0.4rem;
+  --foreground-color: #333;
+  --background-color: #fff;
 }
 
 * {
@@ -7,4 +12,13 @@
 }
 
 body {
+}
+
+.hamburger-menu input,
+.hamburger-menu::before,
+hamburger-menu::after {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground-color);
 }

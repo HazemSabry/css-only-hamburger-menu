@@ -76,7 +76,16 @@ body {
 .sidebar {
   min-width: var(--sidebar-min-width);
   max-width: var(--sidebar-max-width);
+  padding: 1rem;
   padding-top: calc(var(--hamburger-height) + 2rem);
   background-color: var(--foreground-color);
+  color: var(--background-color);
   min-height: 100vh;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform var(--animation-time);
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  transform: translateX(0);
 }
